@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare two number</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        .button-container {
+            justify-content: space-around;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button1 {
+            background-color: #3498db;
+        }
+
+        .button2 {
+            background-color: #2ecc71;
+        }
+
+        #result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<html>
+<body>
+    
+    <script>
+        
+        var firstInput;
+        var secondInput;
+ 
+        firstInput = window.prompt("please enter the 1st number");
+        secondInput = window.prompt("please enter the 2nd number");
+        firstInput = parseInt(firstInput);
+        secondInput = parseInt(secondInput);
+
+
+
+            if (firstInput > secondInput) {
+                document.body.style.backgroundColor = 'lightblue';
+                document.writeln("firstInput" + " > " + "secondInput");
+            } else if (secondInput > firstInput) {
+                document.body.style.backgroundColor = 'orange';
+                document.writeln("secondInput" + " > " + "firstInput");
+            } else {
+                document.body.style.backgroundColor = 'lightyellow';
+                document.writeln("secondInput" + " == " + "firstInput");
+            }
+
+
+    </script>
+    <div class="button-container">
+        <button class="button button1" onClick="alert(firstInput)">click for 1st input</button>
+        <button class="button button2" onClick="alert(secondInput)">click for 2nd input</button>
+
+</body>
+</html>
+
